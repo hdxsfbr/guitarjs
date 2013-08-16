@@ -1,0 +1,16 @@
+#fretboard .string {
+    border: 1px solid black;
+    overflow: auto;
+}
+
+#fretboard .string div {
+    float: left;
+    border: 1px solid black;
+    width: 50px;
+    text-align: center;
+}
+
+#fretboard .string  div:first-child {
+    width: 30px;
+    border-right: 3px solid black;
+}

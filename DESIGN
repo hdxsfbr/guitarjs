@@ -1,0 +1,17 @@
+MUSIC:
+- getScale(key, type)
+- getChord(key, type)
+
+SCALE:
+- Scale(key, type)
+- getNotes()
+
+CHORD:
+- Chord(key, type)
+
+GUITAR:
+- render
+- plotScale(Scale)
+- plotChord(Chord)
+
+
