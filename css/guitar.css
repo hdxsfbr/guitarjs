@@ -1,16 +1,64 @@
-#fretboard .string {
+#fretboard {
     border: 1px solid black;
-    overflow: auto;
 }
 
-#fretboard .string div {
+#fretboard .string {
+    overflow: auto;
+    height: 20px;
+}
+
+#fretboard .note-container {
     float: left;
-    border: 1px solid black;
+    border-width: 0;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
     width: 50px;
     text-align: center;
+    position: relative;
 }
 
-#fretboard .string  div:first-child {
+#fretboard .note-container:first-child {
     width: 30px;
-    border-right: 3px solid black;
+}
+
+#fretboard .note-container:first-child .note-marker {
+    margin-left: 5px;
+}
+
+#fretboard .note-container:nth-child(4),
+#fretboard .note-container:nth-child(6),
+#fretboard .note-container:nth-child(8),
+#fretboard .note-container:nth-child(16),
+#fretboard .note-container:nth-child(18),
+#fretboard .note-container:nth-child(20) {
+    background-color: #F0F0F0;
+}
+
+#fretboard .note-container:nth-child(1),
+#fretboard .note-container:nth-child(13),
+#fretboard .note-container:nth-child(25) {
+    background-color: #E8E8E8;
+}
+
+#fretboard .note-marker {
+    border-radius: 50%;
+    width: 20px;
+    margin-left: 13px;
+    opacity: 0.9;
+}
+
+#fretboard .string-div {
+    border-bottom: 4px solid darkgrey;
+    height: 8px;
+    position: absolute;
+    top: 0;
+    width: 50px;
+}
+
+#container {
+    overflow: hidden;
+}
+
+.controls, .title {
+    margin-bottom: 10px;
 }

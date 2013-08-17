@@ -12,13 +12,11 @@ define(function(){
             return scaleNotes;
         },
         getScaleNotesFromBaseIntervals: function(key, scaleType) {
-            console.log(key, scaleType);
             var chromaticScale = this.getChromaticScale(key);
             var majorScaleIntervals = this.BASE_SCALE_INTERVALS[scaleType];
             if(majorScaleIntervals) {
                 var scaleNotes = [];
                 for (var i = 0; i < majorScaleIntervals.length; i++) {
-                    console.log(majorScaleIntervals[i], chromaticScale[majorScaleIntervals[i]]);
                     scaleNotes.push(chromaticScale[majorScaleIntervals[i]]);
                 }
                 return scaleNotes;
@@ -123,15 +121,14 @@ define(function(){
     };
 
     MUSIC_UTILS.MODAL_SCALES = {
-        IONIAN: "IONIAN",
         MAJOR: "IONIAN",
+        NATURAL_MINOR: "AEOLIAN",
+        IONIAN: "IONIAN",
         DORIAN: "DORIAN",
         PHRYGIAN: "PHRYGIAN",
         LYDIAN: "LYDIAN",
         MIXOLYDIAN: "MIXOLYDIAN",
         AEOLIAN: "AEOLIAN",
-        NATURAL_MINOR: "AEOLIAN",
-        MINOR: "AEOLIAN",
         LOCRIAN: "LOCRIAN"
     };
 
